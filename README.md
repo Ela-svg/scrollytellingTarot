@@ -1,4 +1,4 @@
-# 🌙 Projet Scroll Story – Lune
+# 🌙 Projet Scrollytelling
 
 ## Description  
 Ce projet est une animation scroll pensée pour mobile (iPhone 14 Pro).  
