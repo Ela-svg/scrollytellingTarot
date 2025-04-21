@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -112,6 +115,7 @@
 }
 
 .titleS1 {
+    font-family: cinzel;
     padding: 0 20px 0 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -125,9 +129,10 @@
 }
 
 .subtitleS1 {
+    font-family: chivo;
     padding: 0 20px 0 20px;
     position: absolute; 
-    top: 50%;
+    top: 55%;
     font-size: 1rem;
 }
 
@@ -139,7 +144,7 @@
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     position: absolute; 
-    top: 65%; 
+    top: 70%; 
     left: 50%; 
     transform: translateX(-50%); 
     }
@@ -177,6 +182,7 @@
     }
 
     .div1S2, .titleS2 { 
+    font-family: cinzel;
      grid-area: 1 / 1 / 2 / 2;
      display: grid;
      grid-template-columns: repeat(2, 1fr);
@@ -191,6 +197,7 @@
 
 
     .div1S2, .subtitleS2 {
+    font-family: chivo;
      position: absolute; 
      top: 40%; 
      display: grid;
@@ -238,6 +245,7 @@
 
 
    .textS3 {
+    font-family: chivo;
     padding: 0 20px 0 20px;
     position: absolute; 
     top: 225%; 
