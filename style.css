@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    color: 000;
+  }
+  
+  .section-1 { 
+    background-color: #F9F1C6; 
+  }
+
+  .section-2 {
+    background-color: #F9F1C6; 
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+
+  
+  /* Conteneur de la jauge */
+.progress-container {
+    position: fixed; 
+    top: 35px; 
+    left: 40%; 
+    transform: translateX(-50%); 
+    width: 250px; 
+    height: 10px;
+    z-index: 9999; 
+}
+
+  
+  /* La ligne de la jauge */
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color:#000;
+    transform: translateY(-50%);
+  }
+  
+  /* Le point qui se déplace */
+  .step-indicator {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #FFE250;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 0.3s ease;
+    left: 0%; 
+  }
+
+  /* Les 3 points fixes sur la jauge */
+  .step {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #B99ED1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .step-1 { left: 0%; }
+  .step-2 { left: 50%; }
+  .step-3 { left: 100%; }
+
+.image-container {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
+
+
+#section3 .image-container {
+    position: absolute;
+    top: 270%;
+    left: 50%;
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.rotating-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s ease-out; 
+}
+
+.titleS1 {
+    padding: 0 20px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    position: absolute; 
+    top: 13%; 
+    transform: translateX(-50%); 
+    font-size: 2.4rem;
+}
+
+.subtitleS1 {
+    padding: 0 20px 0 20px;
+    position: absolute; 
+    top: 50%;
+    font-size: 1rem;
+}
+
+
+.triangle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    position: absolute; 
+    top: 65%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    }
+
+    .div1S1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2S1 { grid-area: 1 / 2 / 2 / 3; }
+    .div3S1 { grid-area: 1 / 3 / 2 / 4; }
+    .div4S1 { grid-area: 2 / 2 / 3 / 3; }
+    .div5S1 { grid-area: 3 / 2 / 4 / 3; }
+
+    /* Image de la section 2 */
+    .section-2-image {
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        width: 300px; 
+        height: 300px;
+        object-fit: contain;
+        z-index: 10;
+    }
+  
+  .section-2-rotating {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.1s ease-out;
+  }
+  
+  .section-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+    .div1S2, .titleS2 { 
+     grid-area: 1 / 1 / 2 / 2;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: 1fr;
+     grid-column-gap: 16px;
+     grid-row-gap: 16px;
+     padding: 0 20px 0 20px;
+     position: absolute; 
+     top: 10%; 
+     font-size: 2.3rem;
+    }
+
+
+    .div1S2, .subtitleS2 {
+     position: absolute; 
+     top: 40%; 
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: 1fr;
+     grid-column-gap: 16px;
+     grid-row-gap: 16px;
+     padding: 0 20px 0 20px;
+     font-size: 1rem;
+    }
+
+
+    .div2S2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute; 
+    top: 80%; 
+    left: 19%;
+    }
+
+    .cards {
+    position: absolute; 
+    top: 65%; 
+    left: 40%;
+    }
+
+   .star-yellow {
+    position: absolute; 
+    top: 220%; 
+    left: 20%;
+   }
+
+   .star-blue {
+    position: absolute; 
+    top: 210%; 
+    left: 40%;
+   }
+
+   .star-purple {
+    position: absolute; 
+    top: 215%; 
+    left: 65%;
+   }
+
+
+   .textS3 {
+    padding: 0 20px 0 20px;
+    position: absolute; 
+    top: 225%; 
+    left: 30%;
+    }
+
+
+    /* SECTION 3 */
+#section3 {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 80px; 
+    background-color: #F9F1C6;
+  }
+  
+  
+  #section3 .rotating-image {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.1s ease-out;
+  }
+  

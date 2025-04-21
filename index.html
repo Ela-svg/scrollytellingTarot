@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCROLLYTELLING</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrollytelling - Tarot</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 </head>
 <body>
-    <h1>hello</h1>
+  <!-- Jauge de progression -->
+  <div class="progress-container">
+    <div class="line"></div>
+    <div class="step-indicator"></div>
+    <div class="step step-1"></div>
+    <div class="step step-2"></div>
+    <div class="step step-3"></div>
+  </div>
+
+  <!-- Les 3 sections en plein écran -->
+   <!--section1-->
+  <section class="section section-1">
+    <div class="titleS1" data-aos="fade-down" data-aos-delay="300">
+        <h1>How to read Tarot cards</h1>
+    </div>
+   <p class="subtitleS1" data-aos="fade-down" data-aos-delay="350">Discover the ancient art of tarot, your guide to self, discovery and insight. Learn card meanings, explore spreads, and start reading with confidence. Unlock the wisdom within.</p>
+    <div class="image-container">
+    <img src="./images/cercle-lune.png" alt="lune" class="rotating-image" />
+    </div>
+
+<!--animation-section1-->
+    <div class="triangle">
+            <div class="div1S1" data-aos="fade-up" data-aos-delay="300"> <img src="./images/triangle 2.png" width="110px" alt=""> </div>
+            <div class="div2S1" data-aos="fade-up" data-aos-delay="400"><img src="./images/triangle 1.png" width="110px" alt=""></div>
+            <div class="div3S1" data-aos="fade-up" data-aos-delay="500"><img src="./images/triangle 3.png" width="110px" alt=""> </div>
+            <div class="div4S1" data-aos="fade-up" data-aos-delay="600"><img src="./images/triangle 1.png" width="110px" alt=""></div>
+            <div class="div5S1" data-aos="fade-up" data-aos-delay="700"> <img src="./images/triangle 1.png" width="110px" alt=""></div>
+    </div>
+
+  </section>
+  
+  <!--section2-->
+  <section class="section section-2">
+    <div class="section-2-image">
+      <img src="./images/cercle-lune.png" alt="Image" class="rotating-image section-2-rotating">
+    </div>
+    <div class="div1S1">
+        <h1 class="titleS2">A Brief History of Tarot</h1>
+        <br>
+        <p class="subtitleS2">Tarot began in 15th-century in Italy as a card game, but over time evolved into a powerful tool for spiritual insight and divination. Mystical and occult teachings were added to the decks, and the images on the cards became more symbolic and allegorical.</p>
+    </div>
+   
+    <div class="div2S2" data-aos="fade-up-left"> 
+        <img src="./images/hand.png" alt="">
+    </div>
+    <div class="cards">
+    <img class="card1" data-aos="flip-left" data-aos-delay="350" src="./images/card1.png" alt="">
+    <img class="card2" data-aos="flip-right" data-aos-delay="450" src="./images/card2.png" alt="">
+    </div>
+  </section>
+  
+ <!--section3-->
+  <section id="section3" class="section">
+    <div>
+<div class="star-yellow" data-aos="zoom-in-right" data-aos-delay="300" ><img src="./images/star3.png" alt="jaune"></div>
+<div class="star-blue" data-aos="zoom-in-down" data-aos-delay="400"><img src="./images/star1.png" alt="bleu"></div>
+<div class="star-purple" data-aos="zoom-in-left" data-aos-delay="500"><img src="./images/star2.png" alt="violet"></div>
+<p class="textS3" data-aos="fade-left" data-aos-delay="200" >By the 18th and 19th centuries, sccultists and mystics embraced the cards for their deeper meanings. In the 20th century, tarot surged in popularity, becoming a key part of the New Age movement.</p>
+    </div>
+    <div class="image-container">
+        <img src="./images/lune-oeil.png" alt="" class="rotating-image" id="rotating-section3">
+    </div>
+  </section>
+
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
