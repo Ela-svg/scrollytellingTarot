@@ -116,6 +116,7 @@
 
 .titleS1 {
     font-family: cinzel;
+    color: #101340;
     padding: 0 20px 0 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,6 +131,7 @@
 
 .subtitleS1 {
     font-family: chivo;
+    color: #101340;
     padding: 0 20px 0 20px;
     position: absolute; 
     top: 55%;
@@ -183,6 +185,7 @@
 
     .div1S2, .titleS2 { 
     font-family: cinzel;
+    color: #101340;
      grid-area: 1 / 1 / 2 / 2;
      display: grid;
      grid-template-columns: repeat(2, 1fr);
@@ -198,6 +201,7 @@
 
     .div1S2, .subtitleS2 {
     font-family: chivo;
+    color: #101340;
      position: absolute; 
      top: 40%; 
      display: grid;
@@ -246,6 +250,7 @@
 
    .textS3 {
     font-family: chivo;
+    color: #101340;
     padding: 0 20px 0 20px;
     position: absolute; 
     top: 225%; 
