@@ -1,138 +1,144 @@
-
+// === Jauge de progression ===
 const indicator = document.querySelector('.step-indicator');
-const rotatingImage = document.querySelector('.rotating-image');
-
-// Variables pour calculer la rotation en fonction du scroll
-let rotationAngle = 0;
-
-// Écouter le scroll
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const height = window.innerHeight;
 
-    // 1. Jauge de progression 
     let position = 0;
-
     if (scrollY < height) {
-        position = 0; // Section 1
+        position = 0;
     } else if (scrollY < 2 * height) {
-        position = 50; // Section 2
+        position = 50;
     } else {
-        position = 100; // Section 3
+        position = 100;
     }
-
-    // Déplace le point sur la jauge
     indicator.style.left = `${position}%`;
+});
 
+// === Rotation image Section 1 ===
+const section1 = document.querySelector('.section-1');
+const rotatingImage = section1?.querySelector('.rotating-image');
 
-    // 2. Rotation de l'image dans la section 1
-
-    const section1 = document.querySelector('.section-1');
-    const section1Rect = section1.getBoundingClientRect();
-
-    // Vérifie si l'utilisateur est toujours dans la section 1
-    if (section1Rect.top <= 0 && section1Rect.bottom >= 0) {
-        // L'intensité de la rotation en fonction du scroll
-        rotationAngle += scrollY * 0.01; 
-        rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (rotatingImage) {
+        const section1Rect = section1.getBoundingClientRect();
+        if (section1Rect.top <= 0 && section1Rect.bottom >= 0) {
+            const rotationAngle = scrollY * 0.01;
+            rotatingImage.style.transform = `rotate(${rotationAngle}deg)`;
+        }
     }
 });
 
-// Rotation pour la section 2 
+// === Rotation image Section 2 ===
 const section2Image = document.querySelector('.section-2-rotating');
-let section2Rotation = 0;
-
 window.addEventListener('scroll', () => {
-  const section2 = document.querySelector('.section-2');
-  const section2Rect = section2.getBoundingClientRect();
-
-  if (section2 && section2Image && section2Rect.top <= 0 && section2Rect.bottom >= 0) {
-    section2Rotation += window.scrollY * 0.02;
-    section2Image.style.transform = `rotate(${section2Rotation}deg)`;
-  }
+    const section2 = document.querySelector('.section-2');
+    if (section2 && section2Image) {
+        const section2Rect = section2.getBoundingClientRect();
+        if (section2Rect.top <= 0 && section2Rect.bottom >= 0) {
+            const rotation = window.scrollY * 0.02;
+            section2Image.style.transform = `rotate(${rotation}deg)`;
+        }
+    }
 });
 
+// === Rotation image Section 3 ===
 const section3 = document.getElementById('section3');
-const image3 = section3.querySelector('.rotating-image');
-
-function rotateImageInSection(section, image) {
-  const sectionTop = section.offsetTop;
-  const sectionHeight = section.offsetHeight;
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-
-  if (scrollY + windowHeight > sectionTop && scrollY < sectionTop + sectionHeight) {
-    const progress = (scrollY + windowHeight - sectionTop) / (sectionHeight + windowHeight);
-    const rotation = (progress - 0.5) * 2 * 180; 
-    image.style.transform = `rotate(${rotation}deg)`;
-  }
-}
-
+const image3 = section3?.querySelector('.rotating-image');
 window.addEventListener('scroll', () => {
-  rotateImageInSection(section1, image1);
-  rotateImageInSection(section2, image2);
-  rotateImageInSection(section3, image3);
-});
-
-window.addEventListener('scroll', () => {
-    const image = document.getElementById('rotating-section3');
-    const section = document.getElementById('section3');
-  
-    if (!image || !section) return;
-  
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
+    if (!image3 || !section3) return;
+    const sectionTop = section3.offsetTop;
+    const sectionHeight = section3.offsetHeight;
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
-  
-    
+
     if (scrollY + windowHeight >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      const scrollProgress = (scrollY + windowHeight - sectionTop) / (sectionHeight + windowHeight);
-      const rotation = scrollProgress * 360; // 
-      image.style.transform = `rotate(${rotation}deg)`;
+        const scrollProgress = (scrollY + windowHeight - sectionTop) / (sectionHeight + windowHeight);
+        const rotation = scrollProgress * 360;
+        image3.style.transform = `rotate(${rotation}deg)`;
     }
-  });
-  
-  const container = document.querySelector('.carousel-container');
-  const cards = document.querySelectorAll('.carousel img');
-  
-  function updateCardsPosition() {
+});
+
+// === Section 6 : Carousel dynamique ===
+const section6 = document.querySelector('#section6');
+const container = document.querySelector('.carousel-container');
+const carousel = document.querySelector('.carousel');
+const cards = document.querySelectorAll('.carousel img');
+const textS6 = document.querySelector('.textS6');
+const chooseText = document.querySelector('.choose');
+
+// Fonction : animation + zoom carte sélectionnée
+function expandCard(card) {
+  const clone = card.cloneNode(true);
+  clone.classList.add('card-expanded');
+  document.body.appendChild(clone);
+
+  // Masquer le texte principal
+  textS6.classList.add('section6-hidden');
+  chooseText.classList.add('section6-hidden');
+
+  // Afficher la description
+  const description = document.querySelector('.card-description-container');
+  description.style.display = 'block';
+
+  textS6.classList.add('section6-hidden');
+// NE MASQUE PAS le carousel
+
+}
+
+// Détection de la carte centrale et animation
+function detectCenterCard() {
     const containerRect = container.getBoundingClientRect();
     const centerX = containerRect.left + containerRect.width / 2;
-  
+
     let closestCard = null;
     let closestDistance = Infinity;
-  
+
     cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - cardCenter);
-  
-      // Appliquer la courbure : plus éloignée du centre = plus bas
-      const maxOffset = 50;
-      const offsetY = Math.min(distance / 3, maxOffset);
-      card.style.transform = `translateY(${offsetY}px) scale(1)`;
-      card.style.zIndex = 1;
-  
-      // Trouver la carte la plus proche du centre
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestCard = card;
-      }
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(centerX - cardCenter);
+
+        const maxOffset = 50;
+        const offsetY = Math.min(distance / 3, maxOffset);
+        card.style.transform = `translateY(${offsetY}px) scale(1)`;
+        card.style.zIndex = 1;
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestCard = card;
+        }
     });
-  
-    // Appliquer le zoom uniquement à la carte au centre
+
     if (closestCard) {
-      closestCard.style.transform = `translateY(-30px) scale(1.2)`;
-      closestCard.style.zIndex = 10;
+        closestCard.style.transform = `translateY(-30px) scale(1.25)`;
+        closestCard.style.zIndex = 10;
+
+        closestCard.addEventListener('click', () => {
+            expandCard(closestCard);
+        }, { once: true });
     }
-  }
-  
-  // Lancer le positionnement au scroll
-  container.addEventListener('scroll', () => {
-    requestAnimationFrame(updateCardsPosition);
-  });
-  
-  // Initialisation
-  window.addEventListener('load', updateCardsPosition);
-  
+}
+
+container.addEventListener('scroll', () => {
+    requestAnimationFrame(detectCenterCard);
+});
+window.addEventListener('load', detectCenterCard);
+
+function expandCard(card) {
+  const clone = card.cloneNode(true);
+  clone.classList.add('card-expanded');
+  document.body.appendChild(clone);
+
+  // Masquer uniquement le texte principal
+  textS6.classList.add('section6-hidden');
+
+  // Laisser .choose visible
+
+  // Afficher le titre + description de la carte
+  const description = document.querySelector('.card-description-container');
+  description.style.display = 'block';
+}
+
+
