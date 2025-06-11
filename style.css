@@ -488,7 +488,7 @@
   min-height: 100vh;                /* Hauteur plein écran */
   background: linear-gradient(to bottom, #0f103f, #0a0c2d);
   color: white;
-  padding: 20px 24px 10px;         /* Espace intérieur, ajustable */
+  padding: 30px 24px 10px;         /* Espace intérieur, ajustable */
   text-align: left;
   overflow: visible !important;     /* Important : autorise les débordements (zoom) */
   display: flex;
@@ -682,3 +682,136 @@
   left: 10%;
   padding-right: 24px;
 }
+
+
+/* SECTION 8 */
+#section8 {
+  background-color: #f9f1c6;
+  min-height: 100vh;
+  padding: 60px 24px;
+  position: relative;
+  gap: 60px;
+  font-size: 20px;
+  color: #101340;
+  line-height: 1.4;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Cercles gris */
+.circle1-8 {
+  position: absolute;
+  bottom: 75%;
+  left: 10%;
+}
+
+.circle2-8 {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+}
+
+
+.method1-8 p {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.method2-8 p {
+  position: absolute;
+  top: 67%;
+  left: 10%;
+  padding-right: 24px;
+}
+
+/* Étoiles positionnées */
+.star-top-left {
+  position: absolute;
+  top: -2%;
+  left: 24px;
+  width: 55px;
+}
+
+.star-top-right {
+  position: absolute;
+  top: 8%;
+  right: -4%;
+  width: 80px;
+}
+
+.star-bottom-left {
+  position: absolute;
+  bottom: -3%;
+  left: -5%;
+  width: 90px;
+}
+
+
+#section9 {
+  background-color: #f9f1c6;
+  min-height: 100vh;
+  padding: 60px 24px;
+  position: relative;
+  gap: 60px;
+  font-size: 20px;
+  color: #101340;
+  line-height: 1.4;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Cercles gris */
+.circle1-9 {
+  position: absolute;
+  bottom: 75%;
+  left: 10%;
+}
+
+.circle2-9 {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+}
+
+/* Texte */
+.p {
+  font-size: 14px;
+  color: #101340;
+  line-height: 1.4;
+  margin: 5px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  text-align: left;
+}
+
+.method3-9 p {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.method4-9 p {
+  position: absolute;
+  top: 67%;
+  left: 10%;
+  padding-right: 24px;
+}
+
+.star-top-right {
+  position: absolute;
+  top: 8%;
+  right: -4%;
+  width: 80px;
+}
+
+.star-bottom-left {
+  position: absolute;
+  bottom: -3%;
+  left: -5%;
+  width: 90px;
+}
+
+
