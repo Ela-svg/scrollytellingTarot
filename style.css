@@ -619,3 +619,66 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+#section7 {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0c2d 65%, #F9F1C6 100%);
+  color: white;
+  position: relative;
+  padding: 30px 24px;
+}
+
+/* Éléments décoratifs */
+.lune7 {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 160px;
+}
+
+.star-purple7 {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 50px;
+}
+
+.star-yellow7 {
+  position: absolute;
+  bottom: 75px;
+  left: 40px;
+  width: 60px;
+}
+
+.star-light7 {
+  position: absolute;
+  top: 180px;
+  right:0px;
+  width: 60px;
+}
+
+/* Contenu texte */
+.contentS7 h2 {
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  color: #F9F1C6;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-align: left;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.contentS7 p {
+  color: #F9F1C6;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: left;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  padding-right: 24px;
+}
