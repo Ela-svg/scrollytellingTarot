@@ -815,3 +815,65 @@
 }
 
 
+#section10 {
+  background-color: #f9f1c6;
+  min-height: 100vh;
+  padding: 60px 24px;
+  position: relative;
+}
+
+/* Lune */
+.lune10 {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 160px;
+}
+
+/* Étoiles */
+.star-top-left-10 {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 60px;
+}
+
+.star-middle-right-10 {
+  position: absolute;
+  top: 51%;
+  right: 15%;
+  width: 100px;
+}
+
+.star-bottom-left-10 {
+  position: absolute;
+  bottom: 65px;
+  left: 65px;
+  width: 50px;
+}
+
+/* Contenu */
+.contentS10 h2 {
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  line-height: 1.1;
+  color: #191938;
+  margin-bottom: 24px;
+  text-align: left;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.contentS10 p {
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  padding-right: 24px;
+}
