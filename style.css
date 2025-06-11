@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 
 * {
     margin: 0;
@@ -275,3 +276,207 @@
     transition: transform 0.1s ease-out;
   }
   
+
+  #section4 {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #F9F1C6 0%, #292B4E 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Lune */
+  .Lune2 {
+    position: absolute;
+    top: 40px;
+    left: 20%;
+    width: 130px;
+  }
+  
+  /* Étoile jaune en haut à droite */
+  .star-yellow {
+    position: absolute;
+    top: 80px;
+    left: 70%;
+    width: 60px;
+  }
+  
+  /* Étoile bleue un peu plus basse à droite */
+  .star-blue {
+    position: absolute;
+    top: 180px;
+    left: 60%;
+    width: 45px;
+  }
+  
+  /* Texte */
+  .contentS4 {
+    z-index: 2;
+    margin-top: 200px;
+    padding: 0 32px;
+    font-family: "Chivo", sans-serif;
+    font-weight: 300;
+  }
+  
+  .contentS4 p {
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: -2%;
+    color: #101340;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+  }
+  
+  /* Triangles en bas au centre */
+  .triangleS4 {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+.card1-S4{
+  position: absolute;
+    top: 55%;
+    left: 10%;
+    right: 10%;
+    z-index: 1;
+}
+
+.card2-S4{
+  position: absolute;
+    top: 55%;
+    left: 25%;
+}
+
+.card3-S4{
+  position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.card4-S4{
+  position: absolute;
+    top: 55%;
+    left: 60%;
+}
+
+
+/* SECTION 5 */
+#section5 {
+  min-height: 100vh;
+  padding: 60px 32px 120px;
+  background: linear-gradient(to bottom, #292B4E, #101340); /* Dégradé ajustable */
+  color: #F9F1C6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bloc principal de texte */
+.contentS5 h2 {
+  font-size: 62px;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  margin: 0 0 20px;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+.contentS5 .subtitle {
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: #F9F1C6;
+}
+
+.categories {
+  position: absolute;
+  top: 410px;
+  padding-left: 60px;
+}
+
+.categories li {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+}
+
+/* Couleurs spécifiques */
+.violet {
+  color: #a58bc7;
+}
+
+.yellow {
+  color: #f3c24b;
+}
+
+/* Cartes déco en bas */
+
+.card1-S5 {
+  position: absolute;
+  top: 60%;
+  right: 73%;
+}
+
+.card2-S5 {
+  position: absolute;
+  top: 57%;
+  right: 42%;
+}
+
+.card3-S5 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+}
+
+.card4-S5 {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+}
+
+.card6-S5 {
+  position: absolute;
+  top: 73%;
+  right: 44%;
+}
+
+.card5-S5 {
+  position: absolute;
+ bottom: 0%;
+  right: 60%;
+}
+
+.card7-S5 {
+  position: absolute;
+  top: 80%;
+  left: 62%;
+}
+
+.card8-S5 {
+  position: absolute;
+  top: 70%;
+  left: 87%;
+}
+
+.card9-S5 {
+  position: absolute;
+  top: 94%;
+  left: 50%;
+}
