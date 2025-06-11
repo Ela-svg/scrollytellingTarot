@@ -93,3 +93,46 @@ window.addEventListener('scroll', () => {
     }
   });
   
+  const container = document.querySelector('.carousel-container');
+  const cards = document.querySelectorAll('.carousel img');
+  
+  function updateCardsPosition() {
+    const containerRect = container.getBoundingClientRect();
+    const centerX = containerRect.left + containerRect.width / 2;
+  
+    let closestCard = null;
+    let closestDistance = Infinity;
+  
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(centerX - cardCenter);
+  
+      // Appliquer la courbure : plus éloignée du centre = plus bas
+      const maxOffset = 50;
+      const offsetY = Math.min(distance / 3, maxOffset);
+      card.style.transform = `translateY(${offsetY}px) scale(1)`;
+      card.style.zIndex = 1;
+  
+      // Trouver la carte la plus proche du centre
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestCard = card;
+      }
+    });
+  
+    // Appliquer le zoom uniquement à la carte au centre
+    if (closestCard) {
+      closestCard.style.transform = `translateY(-30px) scale(1.2)`;
+      closestCard.style.zIndex = 10;
+    }
+  }
+  
+  // Lancer le positionnement au scroll
+  container.addEventListener('scroll', () => {
+    requestAnimationFrame(updateCardsPosition);
+  });
+  
+  // Initialisation
+  window.addEventListener('load', updateCardsPosition);
+  

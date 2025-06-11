@@ -480,3 +480,90 @@
   top: 94%;
   left: 50%;
 }
+
+
+/* SECTION 6 */
+#section6 {
+  position: relative;               /* Nécessaire pour le positionnement interne */
+  min-height: 100vh;                /* Hauteur plein écran */
+  background: linear-gradient(to bottom, #0f103f, #0a0c2d);
+  color: white;
+  padding: 60px 24px 100px;         /* Espace intérieur, ajustable */
+  text-align: left;
+  overflow: visible !important;     /* Important : autorise les débordements (zoom) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Texte en haut, carousel en bas */
+}
+
+/* TITRE */
+.textS6 h2 {
+  font-size: 62px;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+.textS6 .yellow {
+  color: #F9F1C6;
+}
+.textS6 .violet {
+  color: B99ED1;
+}
+.textS6 p {
+  color: #F9F1C6;
+  font-size: 20px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  margin-bottom: 12px;
+}
+
+/* CONTENEUR DU CAROUSEL */
+.carousel-container {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 50px 0;
+}
+
+/* LISTE DES CARTES */
+.carousel {
+  display: flex;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+/* STYLE DES CARTES */
+.carousel img {
+  width: 90px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: scale(1) translateY(30px);  /* base courbée */
+  z-index: 1;
+}
+
+/* Carte au centre */
+.carousel img.active {
+  transform: scale(1.25) translateY(-40px);  /* mise en avant */
+  z-index: 10;
+}
+
+/* TEXTE EN BAS */
+.choose {
+  color: #F9F1C6;
+  font-size: 20px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: center;
+  margin-top: 5px;
+}
