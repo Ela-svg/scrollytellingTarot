@@ -1,0 +1,25 @@
+<svg width="68" height="78" viewBox="0 0 68 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_968_72)">
+<path d="M32.3908 3.46572L36.9716 1.89178L63.6005 18.1811L63.692 24.6036L38.1886 66.2953L29.1393 69.9127L5.43796 55.4143L4.93807 48.3439L32.3908 3.46572Z" fill="#B99ED1"/>
+<g clip-path="url(#clip0_968_72)">
+<path d="M23.2754 29.7427L26.6727 28.7688L32.3201 28.7867L36.1089 29.5999L39.1496 31.3781L41.7161 34.2813L43.14 36.8453L44.3052 39.9209L45.028 42.8961L42.8127 44.0319L39.7911 44.6369L36.9332 44.4027L34.658 44.2618L31.0196 42.7302L28.6564 41.3483L25.91 38.8914L24.5339 36.2539L23.4821 33.3189L23.2754 29.7427Z" fill="#F9F1C6"/>
+<path d="M32.3298 30.7986L35.3289 30.5465L37.1938 31.234L38.7135 32.5282L39.4274 33.6333L40.048 36.1876L39.9131 37.5977L39.4449 38.9736L38.178 40.7605L36.5842 41.8987L35.1568 42.3971L33.07 42.4604L31.3199 41.907L29.9027 41.0782L28.8114 39.3493L28.2805 37.723L28.2482 35.8318L28.7263 34.1574L29.4419 32.9336L31.0142 31.4242L32.3298 30.7986Z" fill="#3C1981"/>
+<path d="M33.2396 33.4128L34.1288 33.2551L35.4164 33.4936L36.3411 34.1036L36.9917 35.0109L37.2334 35.7483L37.2581 36.8732L36.9743 37.8277L36.3955 38.8175L35.4568 39.3617L34.4585 39.6733L33.4984 39.6584L32.4838 39.2877L31.547 38.4332L31.1443 37.661L30.961 36.6931L31.0838 35.6791L31.6373 34.5163L32.4167 33.8813L33.2396 33.4128Z" fill="#101340"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_968_72" x="0.93811" y="1.8916" width="66.7539" height="76.0215" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_968_72"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_968_72" result="shape"/>
+</filter>
+<clipPath id="clip0_968_72">
+<rect width="25.4175" height="13.9036" fill="white" transform="translate(26.6079 24.0439) rotate(30.3183)"/>
+</clipPath>
+</defs>
+</svg>

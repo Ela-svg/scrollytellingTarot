@@ -3,6 +3,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 
+@keyframes zoomInUpLoop {
+  0%   { transform: scale(1) translateY(0); opacity: 1; }
+  50%  { transform: scale(1.1) translateY(-5px); opacity: 0.9; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  25%     { opacity: 0.4; transform: scale(1.1); }
+  50%     { opacity: 0.8; transform: scale(0.95); }
+  75%     { opacity: 0.3; transform: scale(1.05); }
+}
+
+@keyframes swing {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes swing2 {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(45deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes swing3 {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg) skewY(0deg); }
+  25% { transform: rotate(3deg) skewY(3deg); }
+  50% { transform: rotate(0deg) skewY(0deg); }
+  75% { transform: rotate(-3deg) skewY(-3deg); }
+  100% { transform: rotate(0deg) skewY(0deg); }
+}
+
+@keyframes melange {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  15%  { transform: translate(65px, 40px) rotate(12deg); }
+  30%  { transform: translate(80px, -60px) rotate(-15deg); }
+  50%  { transform: translate(-100px, 70px) rotate(18deg); }
+  70%  { transform: translate(90px, -40px) rotate(-10deg); }
+  85%  { transform: translate(-40px, 30px) rotate(8deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
 
 * {
     margin: 0;
@@ -104,21 +153,48 @@
 }
 
 
-#section3 .image-container {
-    position: absolute;
-    top: 270%;
-    left: 50%;
-    width: 350px;
-    height: auto;
-    margin-bottom: 20px;
+.lune-S1 {
+  position: absolute;
+  top: 45%;
+  left: 44%;
+  width: 45%;
+  height: auto;
+  animation: swing 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
-
-.rotating-image {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.1s ease-out; 
+.etoile1-S1 {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  width: 50px;
+  animation: sparkle 2s ease-in-out infinite;
 }
+
+.etoile2-S1 {
+  position: absolute;
+  top: 35%;
+  right: -4%;
+  width: 70px;
+  animation: sparkle 2s ease-in-out infinite;
+}
+.etoile3-S1 {
+  position: absolute;
+  bottom: 34%;
+  left: 40%;
+  width: 50px;
+  z-index: 2;
+  animation: sparkle 2s ease-in-out infinite;
+}
+.etoile4-S1 {
+  position: absolute;
+  bottom: 35%;
+  right: 15%;
+  width: 50px;
+  z-index: 2;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
 
 .titleS1 {
   font-family: "Germania One", sans-serif;
@@ -136,241 +212,320 @@
     color: #101340;
     padding: 0 20px 0 20px;
     position: absolute; 
-    top: 56%;
-    font-size: 20PX;
+    top: 70%;
+    font-size: 20px;
 }
 
 
-.triangle {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+.triangle-S1 {
     position: absolute; 
-    top: 70%; 
-    left: 50%; 
+    top: 90%; 
+    left: 38%; 
     transform: translateX(-50%); 
+    animation: zoomInUpLoop 2.5s ease-in-out infinite;
     }
 
-    .div1S1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2S1 { grid-area: 1 / 2 / 2 / 3; }
-    .div3S1 { grid-area: 1 / 3 / 2 / 4; }
-    .div4S1 { grid-area: 2 / 2 / 3 / 3; }
-    .div5S1 { grid-area: 3 / 2 / 4 / 3; }
 
-    /* Image de la section 2 */
-    .section-2-image {
-        position: absolute;
-        top: 30px;
-        left: -30px;
-        width: 300px; 
-        height: 300px;
-        object-fit: contain;
-        z-index: 10;
-    }
-  
-  .section-2-rotating {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.1s ease-out;
-  }
-  
-  .section-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+ 
+/* SECTION 2 */
+    .title-S2 { 
+      font-family: "Germania One", sans-serif;
+      font-size: 62px;
+      font-weight: 400;
+      color: #101340;
+      padding: 0 24px 0 24px;
+      position: absolute; 
+      top: 5%; 
+      transform: translateX(-50%); 
     }
 
-    .div1S2, .titleS2 { 
-    font-family: cinzel;
+
+    .subtitle1-S2 {
     color: #101340;
-     grid-area: 1 / 1 / 2 / 2;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: 1fr;
-     grid-column-gap: 16px;
-     grid-row-gap: 16px;
-     padding: 0 20px 0 20px;
-     position: absolute; 
-     top: 10%; 
-     font-size: 2.3rem;
+    font-family: "Chivo", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: -2%;
+    padding: 0 24px 0 24px;
+    position: absolute; 
+    top: 35%;
     }
 
+    .subtitle2-S2 {
+      color: #101340;
+      font-family: "Chivo", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 125%;
+      letter-spacing: -2%;
+      padding: 0 24px 0 24px;
+      position: absolute; 
+      top: 50%;
+      }
 
-    .div1S2, .subtitleS2 {
-    font-family: chivo;
-    color: #101340;
-     position: absolute; 
-     top: 40%; 
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: 1fr;
-     grid-column-gap: 16px;
-     grid-row-gap: 16px;
-     padding: 0 20px 0 20px;
-     font-size: 1rem;
+
+    .lune-S2{
+      position: absolute;
+      top: 15%;
+      left: 60%;
+      width: 32%;
+      height: auto;
+      animation: swing 2.5s ease-in-out infinite;
+      transform-origin: center bottom;
     }
 
-
-    .div2S2 { 
-    grid-area: 1 / 2 / 2 / 3; 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: absolute; 
-    top: 80%; 
-    left: 19%;
+    .main-S2{
+      position: absolute;
+      bottom: -10%;
+      left: 60%;
     }
 
-    .cards {
-    position: absolute; 
-    top: 65%; 
-    left: 40%;
+    .cartes-S2{
+      position: absolute;
+      bottom: 5%;
+      left: 10%;
+      width: 96%;
+      animation: swing 1.5s ease-in-out infinite;
+      transform-origin: center bottom;
     }
 
-   .star-yellow {
-    position: absolute; 
-    top: 220%; 
-    left: 20%;
-   }
+    .etoile1-S2 {
+      position: absolute;
+      top: 68%;
+      left: 8%;
+      width: 90px;
+      animation: sparkle 2s ease-in-out infinite;
+    }
 
-   .star-blue {
-    position: absolute; 
-    top: 210%; 
-    left: 40%;
-   }
-
-   .star-purple {
-    position: absolute; 
-    top: 215%; 
-    left: 65%;
-   }
-
-
-   .textS3 {
-    font-family: chivo;
-    color: #101340;
-    padding: 0 20px 0 20px;
-    position: absolute; 
-    top: 225%; 
-    left: 30%;
+    .etoile2-S2 {
+      position: absolute;
+      top: 60%;
+      left: 60%;
+      width: 60px;
+      z-index: 2;
+      animation: sparkle 2s ease-in-out infinite;
     }
 
 
     /* SECTION 3 */
-#section3 {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    padding-bottom: 80px; 
-    background-color: #F9F1C6;
-  }
-  
-  
-  #section3 .rotating-image {
-    width: 100%;
-    height: auto;
-    transform: rotate(0deg);
-    transition: transform 0.1s ease-out;
-  }
-  
 
-  #section4 {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #F9F1C6 0%, #292B4E 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  /* Lune */
-  .Lune2 {
-    position: absolute;
-    top: 40px;
-    left: 20%;
-    width: 130px;
-  }
-  
-  /* Étoile jaune en haut à droite */
-  .star-yellow {
-    position: absolute;
-    top: 80px;
-    left: 70%;
-    width: 60px;
-  }
-  
-  /* Étoile bleue un peu plus basse à droite */
-  .star-blue {
-    position: absolute;
-    top: 180px;
-    left: 60%;
-    width: 45px;
-  }
-  
-  /* Texte */
-  .contentS4 {
-    z-index: 2;
-    margin-top: 200px;
-    padding: 0 32px;
+    #section3 {
+      height: 100vh;
+      background-color: #F9F1C6;
+    }
+
+    .texte-S3 {
+    color: #101340;
     font-family: "Chivo", sans-serif;
     font-weight: 300;
-  }
-  
-  .contentS4 p {
     font-size: 20px;
     line-height: 125%;
     letter-spacing: -2%;
-    color: #101340;
-    margin: 0;
+      }
+
+
+    .etoile1-S3 {
+      position: absolute;
+      top: 200%;
+      left: 40%;
+      width: 90px;
+      animation: sparkle 2.7s ease-in-out infinite;
+    }
+
+    .etoile2-S3 {
+      position: absolute;
+      top: 215%;
+      left: 15%;
+      width: 60px;
+      animation: sparkle 2s ease-in-out infinite;
+    }
+
+    .etoile3-S3 {
+      position: absolute;
+      top: 210%;
+      left: 70%;
+      width: 60px;
+      animation: sparkle 2.5s ease-in-out infinite;
+    }
+
+
+    .texte1-S3 {
+      position: absolute;
+      top: 225%;
+      padding: 0 24px 0 24px;
+    }
+
+    .texte2-S3{
+      position: absolute;
+      top: 264%;
+      padding: 0 24px 0 24px;
+    }
+
+
+  .etoile4-S3{
     position: absolute;
-    top: 30%;
-    left: 10%;
-    right: 10%;
+    top: 235%;
+    left: 40%;
+    width: 40px;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .etoile5-S3{
+    position: absolute;
+    top: 236%;
+    left: 55%;
+    width: 40px;
+    animation: sparkle 2.5s ease-in-out infinite;
+  }
+
+  .etoile6-S3{
+    position: absolute;
+    top: 242%;
+    left: 50%;
+    width: 40px;
+    animation: sparkle 2.8s ease-in-out infinite;
+  }
+
+
+.boule-S3 {
+      position: absolute;
+      top: 235%;
+      left: 30%;
+      width: 42%;
+      height: auto;
+      animation: zoomInUpLoop 2s ease-in-out infinite;
+    }
+
+    .mains-S3 {
+      position: absolute;
+      top: 240%;
+      left: -40%;
+      width: 180%;
+      animation: zoomInUpLoop 2.5s ease-in-out infinite;
+    }
+  
+    .oeil-S3 {
+      position: absolute;
+      top: 275%;
+      left: 50%;
+      width: 45%;
+      height: auto;
+      transition: transform 0.2s linear;
+      will-change: transform;
+      display: block;
+      margin: 0 auto;
+    }
+   
+
+  
+
+  
+/* SECTION 4 */
+
+#section4 {
+  height: 100vh;
+  background: linear-gradient(to bottom, #F9F1C6 50%, #292B4E 100%);
+}
+
+.texte-S4 {
+color: #101340;
+font-family: "Chivo", sans-serif;
+font-weight: 300;
+font-size: 20px;
+line-height: 125%;
+letter-spacing: -2%;
+  }
+
+  .texte1-S4 {
+    position: absolute;
+    top: 330%;
+    padding: 0 24px 0 24px;
+  }
+
+  .texte2-S4{
+    position: absolute;
+    top: 343%;
+    padding: 0 24px 0 24px;
+  }
+
+
+  /* Lune */
+  .lune-S4 {
+    position: absolute;
+    top: 297%;
+    left: 15%;
+    width: 45%;
+    animation: swing 2.5s ease-in-out infinite;
+    transform-origin: center bottom;
   }
   
-  /* Triangles en bas au centre */
-  .triangleS4 {
+  .etoile1-S4 {
     position: absolute;
-    bottom: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    top: 305%;
+    left: 70%;
+    animation: sparkle 2s ease-in-out infinite;
   }
+  
+  .etoile2-S4 {
+    position: absolute;
+    top: 320%;
+    left: 60%;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  
 
 .card1-S4{
   position: absolute;
-    top: 55%;
-    left: 10%;
-    right: 10%;
+    top: 360%;
+    left: 5%;
     z-index: 1;
 }
 
 .card2-S4{
   position: absolute;
-    top: 55%;
-    left: 25%;
+    top: 358%;
+    left: 18%;
+    z-index: 1;
 }
 
 .card3-S4{
   position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 357%;
+    left: 32%;
+    z-index: 1;
 }
 
 .card4-S4{
   position: absolute;
-    top: 55%;
-    left: 60%;
+    top: 357%;
+    left: 43%;
+    z-index: 1;
 }
+
+.card5-S4{
+  position: absolute;
+    top: 357%;
+    left: 50%;
+    z-index: 1;
+}
+
+.card6-S4{
+  position: absolute;
+    top: 359%;
+    left: 60%;
+    z-index: 1;
+}
+
+
+.triangle-S4 {
+  position: absolute;
+  top:385%;
+  left: 40%;
+  z-index: 1;
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+}
+
 
 
 /* SECTION 5 */
@@ -383,6 +538,10 @@
   overflow: hidden;
 }
 
+.p-jaune-S5{
+  color: #F9F1C6;
+}
+
 /* Bloc principal de texte */
 .contentS5 h2 {
   font-size: 62px;
@@ -390,7 +549,6 @@
   font-weight: 400;
   margin: 0 0 20px;
   line-height: 1.1;
-  text-transform: lowercase;
 }
 
 .contentS5 .subtitle {
@@ -417,7 +575,7 @@
   font-weight: 400;
 }
 
-/* Couleurs spécifiques */
+
 .violet {
   color: #a58bc7;
 }
@@ -426,90 +584,93 @@
   color: #f3c24b;
 }
 
-/* Cartes déco en bas */
 
 .card1-S5 {
   position: absolute;
   top: 60%;
-  right: 73%;
-}
-
-.card2-S5 {
-  position: absolute;
-  top: 57%;
-  right: 42%;
-}
-
-.card3-S5 {
-  position: absolute;
-  top: 60%;
-  right: 15%;
-}
-
-.card4-S5 {
-  position: absolute;
-  top: 50%;
-  left: 92%;
-}
-
-.card6-S5 {
-  position: absolute;
-  top: 73%;
-  right: 44%;
-}
-
-.card5-S5 {
-  position: absolute;
- bottom: 0%;
-  right: 60%;
-}
-
-.card7-S5 {
-  position: absolute;
-  top: 80%;
-  left: 62%;
+  right: 5%;
 }
 
 .card8-S5 {
   position: absolute;
-  top: 70%;
-  left: 87%;
+  top: 72%;
+  right: 80%;
+}
+
+.card3-S5 {
+  position: absolute;
+  top: 55%;
+  right: 34%;
+}
+
+.card2-S5 {
+  position: absolute;
+  top: 90%;
+  left: 3%;
+  z-index: 1;
+}
+
+.card5-S5 {
+  position: absolute;
+ top: 45%;
+  left: 90%;
+}
+
+.card6-S5 {
+  position: absolute;
+  top: 57%;
+  right: 68%;
+}
+
+
+.card7-S5 {
+  position: absolute;
+  top: 72%;
+  left: 30%;
+}
+
+.card4-S5 {
+  position: absolute;
+  top: 90%;
+  left: 80%;
 }
 
 .card9-S5 {
   position: absolute;
-  top: 94%;
-  left: 50%;
+  top: 76%;
+  left: 60%;
+}
+
+.card10-S5 {
+  position: absolute;
+  top: 90%;
+  left: 40%;
 }
 
 
-/* SECTION 6 */
+
 #section6 {
-  position: relative;               /* Nécessaire pour le positionnement interne */
-  min-height: 100vh;                /* Hauteur plein écran */
+  min-height: 100vh;
   background: linear-gradient(to bottom, #0f103f, #0a0c2d);
-  color: white;
-  padding: 30px 24px 10px;         /* Espace intérieur, ajustable */
+  padding: 80px 24px 200px;
   text-align: left;
-  overflow: visible !important;     /* Important : autorise les débordements (zoom) */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  /* Texte en haut, carousel en bas */
+  overflow: hidden;
+  position: relative;
 }
 
-/* TITRE */
 .textS6 h2 {
   font-size: 62px;
   font-family: "Germania One", system-ui;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
   line-height: 1.1;
 }
+
 .textS6 .yellow {
-  color: #F9F1C6;
+  color: #f3c24b;
 }
 .textS6 .violet {
-  color: B99ED1;
+  color: #a58bc7;
 }
 .textS6 p {
   color: #F9F1C6;
@@ -518,112 +679,120 @@
   font-size: 20px;
   line-height: 125%;
   letter-spacing: -2%;
+  margin-bottom: 30px;
 }
 
-
-/* CONTENEUR DU CAROUSEL */
+/* Conteneur avec overflow pour centrer */
 .carousel-container {
   overflow-x: auto;
-  overflow-y: visible;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
 
-/* LISTE DES CARTES */
+
+
+
+/* Flex des cartes */
 .carousel {
   display: flex;
   gap: 16px;
-  padding: 0 24px;
+  padding: 50px 24px 50px 24px;
 }
 
-/* STYLE DES CARTES */
+/* Cartes */
 .carousel img {
   width: 90px;
-  transition: transform 0.4s ease;
-  flex-shrink: 0;
   scroll-snap-align: center;
-  border-radius: 10px;
+  flex-shrink: 0;
   transition: transform 0.3s ease;
+  border-radius: 10px;
   cursor: pointer;
-  transform: scale(1) translateY(30px);  /* base courbée */
+  transform: scale(1) translateY(30px);
   z-index: 1;
 }
 
-/* Carte au centre */
 .carousel img.active {
-  transform: scale(1.25) translateY(-40px);  /* mise en avant */
+  transform: scale(1.6) translateY(-10px);
   z-index: 10;
 }
 
-/* TEXTE EN BAS */
 .choose {
-  color: #F9F1C6;
-  font-size: 20px;
-  font-family: "Chivo", sans-serif;
-  font-weight: 300;
-  line-height: 125%;
-  letter-spacing: -2%;
   text-align: center;
-  margin-top: 5px;
-  padding-bottom: 25px;
-}
-
-/* Carte qui remonte et s’agrandit */
-.card-expanded {
-  position: relative;
-  left: 28%;
-  top: -880px;
-  width: 190px;
-  z-index: 10;
-  transition: all 0.6s ease;
-  pointer-events: none;
-  animation: fadeIn 0.5s ease forwards;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
 }
 
 
-/* Masquer le reste */
-.section6-hidden {
+/* État initial : invisible et décalé vers le bas */
+#section6 .carte-visible-S6,
+#section6 .card-description-S6 {
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
+  transform: translateY(80px);
+  /* on conserve display: block ou inline-block par défaut */
 }
 
-.card-description-container {
+/* Quand on ajoute la classe .visible : on fait « remonter » la carte en fondu */
+#section6 .carte-visible-S6.visible,
+#section6 .card-description-S6.visible {
+  opacity: 1;
+}
+
+.carte-visible-S6.visible {
+  transform: translateY(0);
   position: absolute;
-  bottom: 45%;
-  left: 5%;
-  text-align: center;
-  margin: 20px 24px;
-  animation: fadeIn 0.5s ease forwards;
+  bottom: 30%;
+  left: 32%;
+  width: 40%;
 }
 
-.card-title {
+
+.card-description-S6 {
+  position: absolute;
+  bottom: 12%;
+  left: 24%;
+  text-align: center;
+}
+
+.carte-visible-S6.visible, .card-title {
   font-family: "Germania One", sans-serif;
   font-size: 62px;
-  font-weight: 400;
-  color: #a58bc7;
-  margin-bottom: 8px;
+  color: #B99ED1;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
-.card-description {
+.carte-visible-S6.visible, .card-description {
+  color: #F9F1C6;
   font-family: "Chivo", sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 125%;
   letter-spacing: -2%;
-  color: #F9F1C6;
 }
 
-/* animation d'apparition */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #section7 {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #0a0c2d 65%, #F9F1C6 100%);
+  background: linear-gradient(to bottom, #0a0c2d 70%, #F9F1C6 100%);
   color: white;
   position: relative;
   padding: 30px 24px;
@@ -635,6 +804,8 @@
   top: 5%;
   left: 10%;
   width: 160px;
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
 .star-purple7 {
@@ -642,6 +813,7 @@
   top: 40px;
   right: 30px;
   width: 50px;
+  animation: sparkle 2s ease-in-out infinite;
 }
 
 .star-yellow7 {
@@ -649,6 +821,7 @@
   bottom: 75px;
   left: 40px;
   width: 60px;
+  animation: sparkle 2.6s ease-in-out infinite;
 }
 
 .star-light7 {
@@ -656,6 +829,7 @@
   top: 180px;
   right:0px;
   width: 60px;
+  animation: sparkle 2.9s ease-in-out infinite;
 }
 
 /* Contenu texte */
@@ -668,7 +842,7 @@
   text-align: left;
   position: absolute;
   top: 25%;
-  left: 10%;
+  
 }
 
 .contentS7 p {
@@ -681,7 +855,6 @@
   text-align: left;
   position: absolute;
   top: 60%;
-  left: 10%;
   padding-right: 24px;
 }
 
@@ -690,164 +863,204 @@
 #section8 {
   background-color: #f9f1c6;
   min-height: 100vh;
-  padding: 60px 24px;
   position: relative;
-  gap: 60px;
-  font-size: 20px;
+}
+
+.h2-S8 {
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
   color: #101340;
-  line-height: 1.4;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  left: 0%;
+}
+
+.method1-8 {
   font-family: "Chivo", sans-serif;
   font-weight: 300;
-  text-align: left;
-}
-
-/* Cercles gris */
-.circle1-8 {
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  color: #101340;
   position: absolute;
-  bottom: 75%;
-  left: 10%;
+  top: 40%;
+  left: 0%;
+  padding: 0 24px 0 24px;
 }
 
-.circle2-8 {
+
+.methode1-img-S8{
   position: absolute;
-  top: 45%;
-  left: 10%;
+  top: 38%;
+  left: 45%;
+  width: 40%;
+  animation: swing 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
 
-.method1-8 p {
+.method2-8 {
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: right;
+  color: #101340;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  right: 0;
+  top: 63%;
+  padding: 0 24px 0 130px;
 }
 
-.method2-8 p {
+.methode2-img-S8 {
   position: absolute;
-  top: 67%;
-  left: 10%;
-  padding-right: 24px;
+  top: 70%;
+  right: 46%;
+  width: 50%;
 }
 
-/* Étoiles positionnées */
-.star-top-left {
-  position: absolute;
-  top: -2%;
-  left: 24px;
-  width: 55px;
-}
-
-.star-top-right {
+.etoile1-S8 {
   position: absolute;
   top: 8%;
   right: -4%;
-  width: 80px;
+  animation: sparkle 2s ease-in-out infinite;
 }
 
-.star-bottom-left {
+.etoile2-S8 {
   position: absolute;
-  bottom: -3%;
-  left: -5%;
-  width: 90px;
+  top: 85%;
+  left: 60%;
+  width: 120px;
+  animation: sparkle 2.5s ease-in-out infinite;
 }
 
+
+
+/* SECTION 9 */
 
 #section9 {
   background-color: #f9f1c6;
   min-height: 100vh;
-  padding: 60px 24px;
   position: relative;
   gap: 60px;
+}
+
+.methode3-img-S9{
+  position: absolute;
+  top: 6%;
+  right: 34%;
+  width: 50%;
+  animation: swing 3.4s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+
+.methode3-9  {
   font-size: 20px;
-  color: #101340;
-  line-height: 1.4;
-  font-family: "Chivo", sans-serif;
-  font-weight: 300;
-  text-align: left;
-}
-
-/* Cercles gris */
-.circle1-9 {
-  position: absolute;
-  bottom: 75%;
-  left: 10%;
-}
-
-.circle2-9 {
-  position: absolute;
-  top: 45%;
-  left: 10%;
-}
-
-/* Texte */
-.p {
-  font-size: 14px;
   color: #101340;
   line-height: 1.4;
   margin: 5px;
   font-family: "Chivo", sans-serif;
   font-weight: 300;
   text-align: left;
-}
-
-.method3-9 p {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 40%;
+  padding: 0 24px 0 24px;
 }
 
-.method4-9 p {
+.methode4-9  {
+  font-size: 20px;
+  color: #101340;
+  line-height: 1.4;
+  margin: 5px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  text-align: left;
   position: absolute;
-  top: 67%;
-  left: 10%;
-  padding-right: 24px;
+  top: 50%;
+  padding: 0 24px 0 24px;
 }
 
-.star-top-right {
+.methode4-img-S9{
+  position: absolute;
+  top: 60%;
+  right: 65%;
+  width: 30%;
+}
+
+.lune-S9{
+  position: absolute;
+  top: 56%;
+  right: 12%;
+  width: 55%;
+  animation: swing 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.lune-jaune-S9{
+  position: absolute;
+  top: 85%;
+  right: 12%;
+  width: 20%;
+}
+
+.etoile1-S9 {
   position: absolute;
   top: 8%;
   right: -4%;
-  width: 80px;
+  width: 90px;
+  animation: sparkle 2.4s ease-in-out infinite;
 }
 
-.star-bottom-left {
+.etoile2-S9 {
   position: absolute;
-  bottom: -3%;
-  left: -5%;
+  top: 55%;
+  left: 50%;
+  width: 70px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile3-S9 {
+  position: absolute;
+  bottom: 5%;
+  left: -3%;
   width: 90px;
+  animation: sparkle 2.7s ease-in-out infinite;
 }
 
 
 #section10 {
   background-color: #f9f1c6;
   min-height: 100vh;
-  padding: 60px 24px;
   position: relative;
 }
 
-/* Lune */
-.lune10 {
+.oeil-S10 {
   position: absolute;
   top: 40px;
   right: 30px;
-  width: 160px;
+  width: 200px;
 }
 
 /* Étoiles */
-.star-top-left-10 {
+.etoile1-S10 {
   position: absolute;
   top: 50px;
   left: 30px;
   width: 60px;
 }
 
-.star-middle-right-10 {
+.etoile2-S10 {
   position: absolute;
   top: 51%;
   right: 15%;
   width: 100px;
 }
 
-.star-bottom-left-10 {
+.etoile3-S10 {
   position: absolute;
   bottom: 65px;
   left: 65px;
@@ -855,7 +1068,7 @@
 }
 
 /* Contenu */
-.contentS10 h2 {
+.texte-S10 h2 {
   font-family: "Germania One", sans-serif;
   font-size: 62px;
   line-height: 1.1;
@@ -864,10 +1077,10 @@
   text-align: left;
   position: absolute;
   top: 25%;
-  left: 10%;
+  padding: 0 24px 0 24px;
 }
 
-.contentS10 p {
+.texte-S10 p {
   font-size: 20px;
   color: #191938;
   line-height: 1.5;
@@ -876,6 +1089,1246 @@
   font-weight: 300;
   position: absolute;
   top: 65%;
-  left: 10%;
-  padding-right: 24px;
+  padding: 0 24px 0 24px;
 }
+
+
+#section11 {
+  background-color: #f9f1c6;
+  min-height: 200vh;
+  position: relative;
+}
+
+.h2_1-S11{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  left: 0%;
+}
+
+.p_1-S11{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 12%;
+  padding: 0 24px 0 24px;
+}
+
+.etoile1-S11 {
+  position: absolute;
+  top: 1%;
+  right: 30%;
+  width: 90px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.etoile2-S11 {
+  position: absolute;
+  top: 4%;
+  right: 10%;
+  width: 50px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile3-S11 {
+  position: absolute;
+  top: 6%;
+  left: 63%;
+  width: 45px;
+  animation: sparkle 2.7s ease-in-out infinite;
+}
+
+.main-S11{
+  position: absolute;
+  top: 26%;
+  left: -18%;
+  animation: swing2 3.5s ease-in-out infinite;
+  transform-origin: center bottom;
+  z-index: 1;
+}
+
+.carte1-S11 {
+  position: absolute;
+  top: 22%;
+  left: 20%;
+}
+
+.carte2-S11 {
+  position: absolute;
+  top: 26%;
+  left: 39%;
+}
+
+.carte3-S11 {
+  position: absolute;
+  top: 33%;
+  left: 53%;
+  width: 28%;
+}
+
+.h2_2-S11{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+}
+
+.p_2-S11{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 48%;
+  padding: 0 24px 0 24px;
+}
+
+.mains-S11 {
+  position: absolute;
+  top: 65%;
+  left: -26%;
+  width: 150%;
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.carte4-S11 {
+  position: absolute;
+  top: 62%;
+  left: 18%;
+  width: 25%;
+  animation: zoomInUpLoop 3.5s ease-in-out infinite;
+}
+.carte5-S11 {
+  position: absolute;
+  top: 62%;
+  left: 34%;
+  width: 18%;
+  animation: zoomInUpLoop 2.8s ease-in-out infinite;
+}
+.carte6-S11 {
+  position: absolute;
+  top: 62%;
+  left: 43%;
+  width: 25%;
+  animation: zoomInUpLoop 3s ease-in-out infinite;
+}
+
+.carte7-S11 {
+  position: absolute;
+  top: 63%;
+  left: 56%;
+  width: 25%;
+  animation: zoomInUpLoop 3.3s ease-in-out infinite;
+}
+
+.h2_3-S11{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 86%;
+  left: 0%;
+}
+
+.p_3-S11{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 94%;
+  padding: 0 24px 0 24px;
+}
+
+.etoile4-S11 {
+  position: absolute;
+  top: 80%;
+  right: 18%;
+  width: 85px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+
+
+
+#section12 {
+  background-color: #f9f1c6;
+  min-height: 300vh;
+  position: relative;
+}
+
+.h2_1-S12{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 18%;
+  left: 0%;
+}
+
+.p_1-S12{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 23%;
+  padding: 0 24px 0 24px;
+}
+
+.p_1_2-S12{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 27%;
+  padding: 0 24px 0 24px;
+}
+
+.lit-S12 {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  width: 80%;
+}
+
+.etoile1-S12 {
+  position: absolute;
+  top: 3%;
+  right: 80%;
+  width: 15%;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+.etoile2-S12 {
+  position: absolute;
+  top: 1%;
+  right: 50%;
+  width: 18%;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+.etoile3-S12 {
+  position: absolute;
+  top: 4%;
+  left: 80%;
+  animation: sparkle 2.9s ease-in-out infinite;
+}
+
+.etoile4-S12 {
+  position: absolute;
+  top: 8%;
+  left: 30%;
+  animation: sparkle 2.2s ease-in-out infinite;
+}
+
+.etoile5-S12 {
+  position: absolute;
+  top: 8%;
+  left: 58%;
+  width: 9%;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.etoile6-S12 {
+  position: absolute;
+  top: 5%;
+  left: 54%;
+  width: 9%;
+  animation: sparkle 2.3s ease-in-out infinite;
+}
+
+.etoile7-S12 {
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  width: 12%;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile8-S12 {
+  position: absolute;
+  top: 17%;
+  right: 15%;
+  width: 18%;
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+.tips4-S12 {
+  position: absolute;
+  top: 33%;
+  right: 24%;
+  width: 55%;
+  animation: zoomInUpLoop 4s ease-in-out infinite;
+}
+
+.etoile9-S12 {
+  position: absolute;
+  top: 32%;
+  left: 10%;
+  width: 25%;
+  animation: sparkle 2.3s ease-in-out infinite;
+}
+
+.etoile10-S12 {
+  position: absolute;
+  top: 32%;
+  left: 55%;
+  width: 12%;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile11-S12 {
+  position: absolute;
+  top: 33%;
+  right: 10%;
+  width: 11%;
+  animation: sparkle 2.6s ease-in-out infinite;
+}
+
+.h2_2-S12{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 43%;
+  left: 0%;
+}
+
+.p_2-S12{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 48%;
+  padding: 0 24px 0 24px;
+}
+
+.carte-S12{
+  position: absolute;
+  top: 59%;
+  left: 25%;
+  width: 50%;
+}
+
+.etoile12-S12 {
+  position: absolute;
+  top: 59%;
+  left: 17%;
+  width: 11%;
+  animation: sparkle 2.3s ease-in-out infinite;
+}
+
+.etoile13-S12 {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  width: 25%;
+  animation: sparkle 2.8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.etoile14-S12 {
+  position: absolute;
+  top: 66%;
+  right: 35%;
+  width: 11%;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.h2_3-S12{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 70%;
+  left: 0%;
+}
+
+.p_3-S12{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 75%;
+  padding: 0 24px 0 24px;
+}
+
+.carte2-S12{
+  position: absolute;
+  top: 86%;
+  left: 30%;
+  width: 40%;
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.fil1-S12 {
+  position: absolute;
+  top: 87%;
+  left: 6%;
+width: 35%;
+transform-origin: top center;
+  animation: wave 4s ease-in-out infinite;
+}
+.fil2-S12 {
+  position: absolute;
+  top: 84%;
+  left: 25%;
+  width: 20%;
+  transform-origin: top center;
+  animation: wave 4s ease-in-out infinite;
+}
+.fil3-S12 {
+  position: absolute;
+  top: 83%;
+  left: 53%;
+  width: 12%;
+  transform-origin: top center;
+  animation: wave 4s ease-in-out infinite;
+}
+.fil4-S12 {
+  position: absolute;
+  top: 87%;
+  left: 57%;
+  width: 30%;
+  transform-origin: top center;
+  animation: wave 4s ease-in-out infinite;
+}
+
+
+#section13 {
+  height: 100vh;
+  background: linear-gradient(to bottom, #F9F1C6 50%, #0a0c2d 100%);
+  position: relative;
+}
+
+.h2-S13{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #101340;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+}
+
+.p-S13{
+  font-size: 20px;
+  color: #191938;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 57%;
+  padding: 0 24px 0 24px;
+}
+
+.lune-S13{
+  position: absolute;
+  top: 2%;
+  right: 15%;
+  width: 42%;
+  animation: swing 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.etoile3-S13 {
+  position: absolute;
+  top: 16%;
+  right: 10%;
+  width: 50px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.etoile1-S13 {
+  position: absolute;
+  top: 75%;
+ left: 10%;
+  width: 75px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.etoile2-S13 {
+  position: absolute;
+  top: 67%;
+  left: 30%;
+  width: 40px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.triangle-S13 {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  width: 20%;
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+}
+
+
+/* SECTION 14 */
+#section14 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+  padding: 0px 24px 0 24px;
+}
+
+.h2-S14{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S14{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+.carte1-S14 {
+  position: absolute;
+  top: 38%;
+  right: 35%;
+  width: 27%;
+}
+
+
+.carte2-S14 {
+  position: absolute;
+  top: 62%;
+  width: 27%;
+}
+
+
+.carte3-S14 {
+  position: absolute;
+  top: 62%;
+ right: 5.5%;
+  width: 27%;
+}
+
+
+
+.etoile1-S14 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 60px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+.etoile2-S14 {
+  position: absolute;
+  top: 2%;
+  left: 35%;
+  width: 85px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+.etoile3-S14 {
+  position: absolute;
+  top: 16%;
+  right: 12%;
+  width: 50px;
+  animation: sparkle 2.6s ease-in-out infinite;
+}
+.etoile4-S14 {
+  position: absolute;
+  bottom: 5%;
+  right: 25%;
+  width: 50px;
+  animation: sparkle 2.7s ease-in-out infinite;
+}
+
+
+
+/* SECTION 15 */
+#section15 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+
+
+.h2-S15{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S15{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+
+.h2_2-S15{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #B99ED1;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 12%;
+  left: 18%;
+}
+
+.p_2-S15{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 5%;
+  padding: 0 24px 0 24px;
+  text-align: center;
+}
+
+
+.etoile0-S15{
+    position: absolute;
+    top: 8%;
+    right: 15%;
+    width: 85px;
+    animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile1-S15 {
+  position: absolute;
+  bottom: 50%;
+  left: 5%;
+  width: 60px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+.etoile2-S15 {
+  position: absolute;
+  top: 2%;
+  left: 35%;
+  width: 70px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile3-S15 {
+  position: absolute;
+  top: 60%;
+  right: -7%;
+  width: 95px;
+  animation: sparkle 2.6s ease-in-out infinite;
+}
+
+.carte-S15{
+  position: absolute;
+  top: 40%;
+  left: 28%;
+  width: 44%;
+}
+
+
+
+/* SECTION 16 */
+#section16 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+
+.h2-S16{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S16{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+
+.etoile1-S16{
+  position: absolute;
+  top: 10%;
+  right: 35%;
+  width: 95px;
+  animation: sparkle 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.etoile2-S16 {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 140px;
+  animation: sparkle 3.5s ease-in-out infinite;
+}
+
+.coeur-S16 {
+  position: absolute;
+  top: 45%;
+  right: 47%;
+  width: 10%;
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+}
+
+.couple-S16 {
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  width: 35%;
+}
+
+
+.personne-S16 {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  width: 25%;
+}
+
+
+.sac-S16 {
+  position: absolute;
+  top: 63%;
+  left: 7%;
+  width: 30%;
+}
+
+.boule-S16 {
+  position: absolute;
+  top: 78%;
+  left: 33%;
+  width: 35%;
+}
+
+.etoile-boule1-S16 {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+.etoile-boule2-S16 {
+  position: absolute;
+  top: 85%;
+  right: 55%;
+  animation: sparkle 3.2s ease-in-out infinite;
+}
+
+
+
+/* SECTION 17 */
+#section17 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+  overflow: hidden;
+}
+
+.h2-S17{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S17{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+.cartes-S17 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cartes-S17 img {
+  position: absolute;
+}
+
+
+.carte1-S17 { 
+  top: 60%; left: 35%; 
+  transform: rotate(-10deg); 
+  animation-delay: 0s; 
+  width: 22%;
+  animation: melange 5s infinite ease-in-out alternate;
+}
+
+.carte2-S17 { 
+  top: 46%; left: 28%; 
+  transform: rotate(5deg); 
+  animation-delay: 5s; 
+  animation: melange 7s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+.carte3-S17 { 
+  top: 45%; left: 35%; 
+  transform: rotate(-5deg); 
+  animation-delay: 10s; 
+  animation: melange 10s infinite ease-in-out alternate;
+}
+
+.carte4-S17 { 
+  top: 50%; 
+  left: 37%; 
+  transform: rotate(8deg); 
+  animation-delay: 15s; 
+  animation: melange 15s infinite ease-in-out alternate;
+}
+
+.carte5-S17 { 
+  top: 43%; 
+  left: 30%; 
+  transform: rotate(-3deg); 
+  animation-delay: 2s; 
+  animation: melange 11s infinite ease-in-out alternate;
+}
+
+.carte6-S17 
+{ top: 40%; 
+  left: 49%; 
+  transform: rotate(6deg); 
+  animation-delay: 12s; 
+  animation: melange 6s infinite ease-in-out alternate;
+  z-index: -0.5;
+}
+
+.main-S17 {
+  position: absolute;
+  bottom: 8%;
+  right: -20%;
+  width: 80%;
+  z-index: 2;
+  animation: swing3 3s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.etoile1-S17 {
+  position: absolute;
+  top: 37%;
+ left: 10%;
+  width: 50px;
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.etoile2-S17 {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  width: 95px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.etoile3-S17 {
+  position: absolute;
+  bottom: 1%;
+ left: 20%;
+  width: 120px;
+  animation: sparkle 2.6s ease-in-out infinite;
+}
+
+/* SECTION 18 */
+#section18 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+
+.h2-S18{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S18{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+.carte1-S18 {
+position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 20%;
+}
+
+.carte2-S18 {
+  position: absolute;
+    top: 75%;
+    left: 40%;
+    width: 20%;
+  }
+
+
+  .carte3-S18 {
+    position: absolute;
+      top: 57.5%;
+      width: 20%;
+      left: 5.5%;
+    }
+
+
+    .carte4-S18 {
+      position: absolute;
+        top: 57.5%;
+        width: 20%;
+        right: 5.5%;
+      }
+
+    .croix-S18{
+      position: absolute;
+        top: 57.5%;
+        width: 25%;
+        left: 38%;
+    }
+
+    .lune-S18{
+      position: absolute;
+      top: 8%;
+      right: 15%;
+      width: 135px;
+      animation: swing 1.8s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+    
+    .etoile1-S18 {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      width: 30px;
+      animation: sparkle 3.5s ease-in-out infinite;
+    }
+
+    .etoile2-S18 {
+      position: absolute;
+      bottom: 5%;
+      left: 10%;
+      width: 80px;
+      animation: sparkle 3.5s ease-in-out infinite;
+    }
+
+
+/* SECTION 19 */
+#section19 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+
+.h2-S19{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.p-S19{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+.carte1-S19 {
+  position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+  }
+  
+  .carte2-S19 {
+    position: absolute;
+      top: 75%;
+      left: 40%;
+      width: 20%;
+    }
+  
+  
+    .carte3-S19 {
+      position: absolute;
+        top: 57.5%;
+        width: 20%;
+        left: 5.5%;
+      }
+  
+  
+      .carte4-S19 {
+        position: absolute;
+          top: 57.5%;
+          width: 20%;
+          right: 5.5%;
+        }
+  
+      .croix-S19{
+        position: absolute;
+          top: 57.5%;
+          width: 25%;
+          left: 38%;
+      }
+
+      .etoile1-S19{
+        position: absolute;
+        top: 8%;
+        right: 15%;
+        width: 135px;
+        animation: sparkle 2.5s ease-in-out infinite;
+      }
+      
+  
+      .etoile2-S19 {
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        width: 60px;
+        animation: sparkle 3.5s ease-in-out infinite;
+      }
+  
+
+
+/* SECTION 20 */
+#section20 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+.h2-S20{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+.p-S20{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  top: 28%;
+  padding: 0 24px 0 24px;
+}
+
+.personne-S20 {
+  position: absolute;
+  bottom: -4%;
+  right: -2%;
+  width: 65%;
+}
+
+.bulle-S20 {
+  position: absolute;
+  top: 36%;
+  left: 10%;
+  width: 57%;
+}
+
+.couple-S20 {
+  position: absolute;
+  top: 42%;
+  left: 20%;
+  width: 35%;
+  z-index: 1;
+}
+
+.coeur-S20 {
+  position: absolute;
+  top: 38%;
+  left: 33%;
+  width: 10%;
+  z-index: 1;
+}
+
+.oeil-S20{
+  position: absolute;
+  top: 7%;
+  right: 10%;
+  width: 35%;
+}
+
+
+
+/* SECTION 21 */
+#section21 {
+  height: 100vh;
+  background: #0a0c2d;
+  position: relative;
+}
+.h2-S21{
+  font-family: "Germania One", sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: #f9f1c6;
+  padding: 24px 24px 0 24px;
+  line-height: 1.2;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+.p-S21{
+  font-size: 20px;
+  color: #f9f1c6;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Chivo", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 25%;
+  padding: 0 24px 0 24px;
+}
+
+.carte1-S21{
+  position: absolute;
+  top: 10%;
+  right: 35%;
+  width: 70px;
+  z-index: 1;
+}
+
+.carte2-S21{
+  position: absolute;
+  top: 8%;
+  right: 24%;
+  width: 80px;
+}
+
+.carte3-S21{
+  position: absolute;
+  top: 13%;
+  right: 16%;
+  width: 90px;
+}
+
+.triangle-S21 {
+  position: absolute; 
+  top: 90%; 
+  left: 40%; 
+  transform: translateX(-50%); 
+  animation: zoomInUpLoop 2.5s ease-in-out infinite;
+  }
