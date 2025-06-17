@@ -1,24 +1,3 @@
-// === Jauge de progression ===
-const indicator = document.querySelector('.step-indicator');
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const height = window.innerHeight;
-
-  let position = 0;
-  if (scrollY < height) {
-    position = 0;
-  } else if (scrollY < 2 * height) {
-    position = 50;
-  } else {
-    position = 100;
-  }
-  indicator.style.left = `${position}%`;
-});
-
-
-
-
-
 
 const container = document.querySelector('.carousel-container');
 const cards = document.querySelectorAll('.carousel img');

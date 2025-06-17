@@ -92,56 +92,6 @@
     .div2 { grid-area: 1 / 2 / 2 / 3; }
 
   
-  /* Conteneur de la jauge */
-.progress-container {
-    position: fixed; 
-    top: 35px; 
-    left: 40%; 
-    transform: translateX(-50%); 
-    width: 250px; 
-    height: 10px;
-    z-index: 9999; 
-}
-
-  
-  /* La ligne de la jauge */
-  .line {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color:#000;
-    transform: translateY(-50%);
-  }
-  
-  /* Le point qui se déplace */
-  .step-indicator {
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: #FFE250;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: left 0.3s ease;
-    left: 0%; 
-  }
-
-  /* Les 3 points fixes sur la jauge */
-  .step {
-    position: absolute;
-    top: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: #B99ED1;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .step-1 { left: 0%; }
-  .step-2 { left: 50%; }
-  .step-3 { left: 100%; }
 
 .image-container {
     position: absolute;
@@ -159,7 +109,7 @@
   left: 44%;
   width: 45%;
   height: auto;
-  animation: swing 2.5s ease-in-out infinite;
+  animation: swing 2s ease-in-out infinite;
   transform-origin: center bottom;
 }
 
@@ -214,6 +164,16 @@
     position: absolute; 
     top: 70%;
     font-size: 20px;
+}
+
+.sous-titre-S1 {
+    font-family: "Chivo", sans-serif;
+    color: #101340;
+    opacity: 60%;
+    padding: 0 20px 0 20px;
+    position: absolute; 
+    top: 60%;
+    font-size: 15px;
 }
 
 
@@ -532,7 +492,7 @@ letter-spacing: -2%;
 #section5 {
   min-height: 100vh;
   padding: 60px 32px 120px;
-  background: linear-gradient(to bottom, #292B4E, #101340); /* Dégradé ajustable */
+  background: linear-gradient(to bottom, #292B4E, #101340); 
   color: #F9F1C6;
   position: relative;
   overflow: hidden;
@@ -542,7 +502,7 @@ letter-spacing: -2%;
   color: #F9F1C6;
 }
 
-/* Bloc principal de texte */
+
 .contentS5 h2 {
   font-size: 62px;
   font-family: "Germania One", system-ui;
@@ -564,7 +524,7 @@ letter-spacing: -2%;
 
 .categories {
   position: absolute;
-  top: 410px;
+  top: 395xpx;
   padding-left: 60px;
 }
 
@@ -652,7 +612,7 @@ letter-spacing: -2%;
 #section6 {
   min-height: 100vh;
   background: linear-gradient(to bottom, #0f103f, #0a0c2d);
-  padding: 80px 24px 200px;
+  padding: 24px 24px 200px;
   text-align: left;
   overflow: hidden;
   position: relative;
@@ -664,6 +624,7 @@ letter-spacing: -2%;
   font-weight: 400;
   margin-bottom: 40px;
   line-height: 1.1;
+  padding-top: 20%;
 }
 
 .textS6 .yellow {
@@ -682,7 +643,7 @@ letter-spacing: -2%;
   margin-bottom: 30px;
 }
 
-/* Conteneur avec overflow pour centrer */
+
 .carousel-container {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -693,16 +654,12 @@ letter-spacing: -2%;
 }
 
 
-
-
-/* Flex des cartes */
 .carousel {
   display: flex;
   gap: 16px;
   padding: 50px 24px 50px 24px;
 }
 
-/* Cartes */
 .carousel img {
   width: 90px;
   scroll-snap-align: center;
@@ -727,15 +684,15 @@ letter-spacing: -2%;
 }
 
 
-/* État initial : invisible et décalé vers le bas */
+
 #section6 .carte-visible-S6,
 #section6 .card-description-S6 {
   opacity: 0;
   transform: translateY(80px);
-  /* on conserve display: block ou inline-block par défaut */
+ 
 }
 
-/* Quand on ajoute la classe .visible : on fait « remonter » la carte en fondu */
+
 #section6 .carte-visible-S6.visible,
 #section6 .card-description-S6.visible {
   opacity: 1;
@@ -775,20 +732,7 @@ letter-spacing: -2%;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* SECTION 7 */
 
 #section7 {
   min-height: 100vh;
@@ -798,7 +742,7 @@ letter-spacing: -2%;
   padding: 30px 24px;
 }
 
-/* Éléments décoratifs */
+
 .lune7 {
   position: absolute;
   top: 5%;
@@ -832,7 +776,7 @@ letter-spacing: -2%;
   animation: sparkle 2.9s ease-in-out infinite;
 }
 
-/* Contenu texte */
+
 .contentS7 h2 {
   font-family: "Germania One", sans-serif;
   font-size: 62px;
@@ -1045,7 +989,6 @@ letter-spacing: -2%;
   width: 200px;
 }
 
-/* Étoiles */
 .etoile1-S10 {
   position: absolute;
   top: 50px;
@@ -1067,7 +1010,6 @@ letter-spacing: -2%;
   width: 50px;
 }
 
-/* Contenu */
 .texte-S10 h2 {
   font-family: "Germania One", sans-serif;
   font-size: 62px;
@@ -1257,7 +1199,7 @@ letter-spacing: -2%;
   font-family: "Chivo", sans-serif;
   font-weight: 300;
   position: absolute;
-  top: 94%;
+  top: 93%;
   padding: 0 24px 0 24px;
 }
 
@@ -1268,7 +1210,6 @@ letter-spacing: -2%;
   width: 85px;
   animation: sparkle 2.4s ease-in-out infinite;
 }
-
 
 
 
@@ -1310,7 +1251,7 @@ letter-spacing: -2%;
   font-family: "Chivo", sans-serif;
   font-weight: 300;
   position: absolute;
-  top: 27%;
+  top: 29%;
   padding: 0 24px 0 24px;
 }
 
@@ -2247,6 +2188,8 @@ position: absolute;
   top: 36%;
   left: 10%;
   width: 57%;
+  animation: swing 2s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
 .couple-S20 {
@@ -2263,6 +2206,7 @@ position: absolute;
   left: 33%;
   width: 10%;
   z-index: 1;
+  animation: sparkle 2s ease-in-out infinite;
 }
 
 .oeil-S20{
@@ -2299,7 +2243,7 @@ position: absolute;
   font-family: "Chivo", sans-serif;
   font-weight: 300;
   position: absolute;
-  bottom: 25%;
+  bottom: 17%;
   padding: 0 24px 0 24px;
 }
 
@@ -2323,6 +2267,11 @@ position: absolute;
   top: 13%;
   right: 16%;
   width: 90px;
+}
+
+.clic-S21:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .triangle-S21 {
